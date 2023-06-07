@@ -63,8 +63,6 @@ func helloRunHandler(w http.ResponseWriter, r *http.Request) {
 	if err := tmpl.Execute(w, data); err != nil {
 		msg := http.StatusText(http.StatusInternalServerError)
 		log.Printf("template.Execute: %v", err)
-		log.Printf("Modification")
-		log.Printf("Modification2")
 		http.Error(w, msg, http.StatusInternalServerError)
 	}
 }
